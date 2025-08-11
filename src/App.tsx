@@ -5,6 +5,12 @@ import { AppMockup } from './cops/AppMockup';
 import { HowItWorksStep } from './cops/HowItWorksStep';
 import { PricingCard } from './cops/PricingCard';
 import { FAQItem } from './cops/FAQItem';
+import * as ZeroHunger from "./assets/Zero_Hunger.png"
+import * as Sdg from "./assets/UN_SDG.png"
+
+import * as Sdg12 from "./assets/Sustainable_Development_Goal_12.png"
+import * as Sdg15 from "./assets/Sustainable_Development_Goal_15.png"
+
 import {
   Sprout,
   Smartphone,
@@ -29,6 +35,7 @@ import {
   Clock,
   Lightbulb,
 } from 'lucide-react';
+import TeamSection12 from './cops/Team';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -353,7 +360,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <PricingCard
               title="Sprout Starter"
-              price="$199"
+              price="1200TK"
               period="one-time"
               features={[
                 "Basic vertical growing tower",
@@ -369,7 +376,7 @@ function App() {
             
             <PricingCard
               title="Garden Guru"
-              price="$349"
+              price="2500TK"
               period="one-time"
               features={[
                 "Premium vertical growing system",
@@ -388,7 +395,7 @@ function App() {
             
             <PricingCard
               title="Farm Fanatic"
-              price="$599"
+              price="6000TK"
               period="one-time"
               features={[
                 "Deluxe multi-tower system",
@@ -410,7 +417,7 @@ function App() {
               All plans include free software updates and access to our growing community of plant parents.
             </p>
             <p className="text-sm text-gray-500">
-              *Prices in USD. Shipping costs may apply outside continental US. Plants not included in shipping weight calculations.
+              *Prices in BDT. Shipping costs may apply outside Bangladesh. Plants not included in shipping weight calculations.
             </p>
           </div>
         </div>
@@ -469,12 +476,70 @@ function App() {
         </div>
       </section>
 
+      {/* Sdg Section */}
+      <section id="sdg" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="lg:text-center flex flex-col flex-1  items-center space-y-4">
+              {/* <img src={ZeroHunger.default} alt="Sdg2" className="w-full max-w-[200px] object-contain" /> */}
+              {/* <img src={Sdg12.default} alt="Sdg12" className="w-full max-w-[200px] object-contain" /> */}
+              {/* <img src={Sdg15.default} alt="Sdg15" className="w-full max-w-[200px] object-contain" /> */}
+              <img src={Sdg.default} alt="UN_SDG_Logo" className='w-full' />
+            </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Growing greens. More like growing <span className="text-green-600">Goals!</span>
+              </h2>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Our incentive is not only beneficial for the plants but for you as well. Covering 3 SDG's and helping to make the world a better place.
+
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="  flex-shrink-0">
+                    <img src={ZeroHunger.default} alt="Sdg2" className="w-12 h-12" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">SDG-2: Zero Hunger</h3>
+                    <p className="text-gray-600">Brings nutrition to your plates directly from your own home.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  {/* <div className="bg-blue-100 p-3 rounded-full flex-shrink-0"> */}
+                  <div className="flex-shrink-0">
+                    {/* <Droplets className="w-6 h-6 text-blue-600" /> */}
+                    <img src={Sdg12.default} alt="Sdg12" className="w-12 h-12" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">SDG-12: Responsible consumption and production</h3>
+                    <p className="text-gray-600">Encourages eco-freindly farming practices that uses fewer resources</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                        <img src={Sdg15.default} alt="Sdg15" className="w-12 h-12" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">SDG-15: Life on land</h3>
+                    <p className="text-gray-600">Allows greater use of available space</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* More Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id='testimonials'>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              More <span className="text-green-600">Glowing</span> Reviews
+              Here are some <span className="text-green-600">Glowing</span> Reviews
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Don't just take our word for it – here's what our growing community of plant whisperers, 
@@ -644,9 +709,9 @@ function App() {
           <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">🌱 Limited Time Offer 🌱</h3>
             <p className="text-green-100 mb-6">
-              Order in the next 48 hours and get FREE shipping plus a bonus herb starter pack worth $49!
+              Order in the next 48 hours and get FREE shipping plus a bonus herb starter pack worth 1000TK!
             </p>
-            <div className="text-3xl font-bold text-yellow-300 mb-2">Save $49 + Free Shipping</div>
+            <div className="text-3xl font-bold text-yellow-300 mb-2">Save 1000TK + Free Shipping</div>
             <div className="text-green-200 text-sm">*Offer expires soon. Don't leaf it too late!</div>
           </div>
 
@@ -665,7 +730,9 @@ function App() {
           </div>
         </div>
       </section>
-
+      <section className='py-20'>
+        <TeamSection12 />
+      </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-6">
