@@ -615,12 +615,17 @@ function MarkedHome() {
           <div className="max-w-4xl mx-auto space-y-4">
             <FAQItem
               question="Do I really need zero gardening experience?"
-              answer="Absolutely! Our system is so user-friendly, even people who've killed plastic plants have succeeded. We've designed everything to be foolproof – and we mean that in the nicest way possible. The app guides you through every step, and our community is always there to help if you get stuck."
+              tooltip="Understatement"
+              bunderline="Absolutely! Our system is so user-friendly, even people who've killed plastic plants have succeeded."
+              answer=" We've designed everything to be foolproof – and we mean that in the nicest way possible. The app guides you through every step, and our community is always there to help if you get stuck."
               delay={0}
             />
             
             <FAQItem
               question="How much space do I need?"
+              tooltip="Antithesis"
+              start="!"
+              end="."
               answer="About as much space as a small refrigerator! Our vertical design maximizes growing potential while minimizing your footprint. Perfect for apartments, condos, or anywhere you can fit a coffee table. If you have room for a houseplant, you have room for a Lettuce Grow system."
               delay={100}
             />

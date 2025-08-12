@@ -19,7 +19,7 @@ export const FeatureCard = ({
       <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
         <Icon className="w-8 h-8 text-green-600" />
       </div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">{title == "Beginner Brilliant" ? <u>{title}</u>:title}</h3>
+      <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">{title == "Beginner Brilliant" && location.pathname == "/marked" ? <u>{title}</u>:title}</h3>
       <p className="text-gray-600 text-center leading-relaxed">{description}{underlined.length!=0 && <u>{underlined}</u>}</p>
     </div>
   );

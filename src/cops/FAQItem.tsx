@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 
 
-export const FAQItem = ({ question, answer, delay = 0 }:any) => {
+export const FAQItem = ({ question, answer, delay = 0,tooltip="",bunderline="",start="",end="" }:any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,7 +25,8 @@ export const FAQItem = ({ question, answer, delay = 0 }:any) => {
       
       {isOpen && (
         <div className="px-6 pb-6">
-          <p className="text-gray-600 leading-relaxed">{answer}</p>
+          {tooltip.length>0 && <p className='Tooltip'>{tooltip}</p>}
+          <p className="text-gray-600 leading-relaxed">{tooltip.length>0&& <u>{bunderline}</u>}{start != "" ? <>{answer.slice(0,answer.indexOf(start))}<u>{answer.slice(answer.indexOf(start),answer.indexOf(end))}</u>{answer.slice(answer.indexOf(end),answer.length-1)}</>:answer}{answer}</p>
         </div>
       )}
     </div>
