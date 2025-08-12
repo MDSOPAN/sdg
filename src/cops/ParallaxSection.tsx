@@ -34,7 +34,7 @@ export const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 
   return (
     <div
-      className={`relative min-h-screen ${className}`}
+      className={`relative min-h-screen ${className} paral`}
       style={parallaxStyle}
     >
       {overlay && (

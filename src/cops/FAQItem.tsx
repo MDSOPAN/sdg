@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-interface FAQItemProps {
-  question: string;
-  answer: string;
-  delay?: number;
-}
 
-export const FAQItem: React.FC<FAQItemProps> = ({ question, answer, delay = 0 }) => {
+
+export const FAQItem = ({ question, answer, delay = 0 }:any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

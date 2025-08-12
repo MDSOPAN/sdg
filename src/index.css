@@ -59,3 +59,27 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #16a34a;
 }
+.Tooltip {
+  background-color: #444;
+  color: white;
+  font-size: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: max-content;
+  /* position: absolute; */
+  /* top: -50%; */
+  max-width: calc(100vw - 10px);
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* Safari-only CSS here */
+  .paral{
+    background-size: cover; /* usually good */
+background-position: center center ; /* centers the image */
+background-repeat: no-repeat ;
+    /* height: 100% !important; */
+    background-attachment: scroll !important;
+    padding-top: 20%;
+  }
+}

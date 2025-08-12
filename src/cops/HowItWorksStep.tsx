@@ -1,26 +1,21 @@
 import React from 'react';
 import { DivideIcon as LucideIcon } from 'lucide-react';
 
-interface HowItWorksStepProps {
-  icon: LucideIcon;
-  step: number;
-  title: string;
-  description: string;
-  delay?: number;
-}
 
-export const HowItWorksStep: React.FC<HowItWorksStepProps> = ({
+export const HowItWorksStep: any = ({
   icon: Icon,
   step,
   title,
   description,
   delay = 0,
-}) => {
+  tooltip=""
+}:any) => {
   return (
     <div
       className={`relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up`}
       style={{ animationDelay: `${delay}ms` }}
     >
+      {tooltip.length != 0 && <p className='Tooltip'>{tooltip}</p>}
       <div className="absolute -top-4 -left-4 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
         {step}
       </div>

@@ -14,9 +14,10 @@ interface TeamCardPropsType {
   img: string;
   name: string;
   title: string;
+  subtitle:string;
 }
 
-function TeamCard({ img, name, title }: TeamCardPropsType) {
+function TeamCard({ img, name, title,subtitle }: TeamCardPropsType) {
   return (
     <Card className="rounded-lg bg-[#FAFAFA] " shadow={false}>
       <CardBody className="text-center">
@@ -35,6 +36,12 @@ function TeamCard({ img, name, title }: TeamCardPropsType) {
           className="mb-2 !text-base !font-semibold text-gray-600"
         >
           {title}
+        </Typography>
+        <Typography
+          color="blue-gray"
+          className="mb-2 !text-base !font-semibold text-gray-600"
+        >
+          {subtitle}
         </Typography>
         <div className="flex items-center justify-center gap-1.5">
           <IconButton variant="text" color="gray">
@@ -57,17 +64,20 @@ const members = [
   {
     img: `${cat.default}`,
     name: "Labib Wadi Sopan",
-    title: "24301250",
+    title: "CTO",
+    subtitle: "ID: 24301250"
   },
   {
     img: `${dra.default}`,
     name: "Sharaf Ahmed",
-    title: "Co-Founder",
+    title: "CEO",
+    subtitle:"ID: 24301140"
   },
   {
     img: `${dra1.default}`,
     name: "Mushtahsin Evan",
-    title: "23203045",
+    title: "COO",
+    subtitle: "ID: 23203045"
   },
 ];
 

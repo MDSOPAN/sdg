@@ -1,17 +1,9 @@
 import React from 'react';
 import { Check, Star } from 'lucide-react';
 
-interface PricingCardProps {
-  title: string;
-  price: string;
-  period: string;
-  features: string[];
-  popular?: boolean;
-  buttonText: string;
-  delay?: number;
-}
 
-export const PricingCard: React.FC<PricingCardProps> = ({
+
+export const PricingCard = ({
   title,
   price,
   period,
@@ -19,7 +11,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   popular = false,
   buttonText,
   delay = 0,
-}) => {
+}:any) => {
   return (
     <div
       className={`relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up ${
@@ -43,7 +35,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       <ul className="space-y-4 mb-8">
-        {features.map((feature, index) => (
+        {features.map((feature:any, index:any) => (
           <li key={index} className="flex items-start">
             <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
             <span className="text-gray-700">{feature}</span>
@@ -52,7 +44,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       </ul>
 
       <button
-        className={`w-full py-4 px-6 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 ${
+        className={`w-full py-4 px-6 rounded-full font-semibold text-lg transition-all duration-300 transform hidden hover:scale-105 ${
           popular
             ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg'
             : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
